@@ -1,0 +1,73 @@
+html{
+    font-size: 16px;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+.loginContainer{
+    position: center;
+    border-radius:1rem;
+    background-color: aquamarine;
+    font-family: sans-serif;
+    height: 30rem;
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.loginTxt{
+    font-size: 1.8rem;
+    line-height:1;
+    letter-spacing:0.2rem;
+    color: white;
+}
+.userName{
+    margin-top:3rem;
+}
+.userName input{
+    outline: none;
+    height: 2rem;
+    width: 15rem;
+    border-radius: .3rem;
+    font-size: 1.2rem;
+    border: .5px solid black;
+}
+.user{
+   font-size: 1.4rem;
+}
+.password{
+    margin-top: 2rem;
+    font-size: 1.4rem;
+}
+.password input{
+    outline: none;
+    height: 2rem;
+    width: 15rem;
+    border-radius: .3rem;
+    font-size: 1.2rem;
+    border: .5px solid black;
+}
+.loginBtn{
+    margin-top: 3rem;
+}
+.loginBtn button{
+    outline: none;
+    border-radius: .6rem;
+    height: 2.5rem;
+    width: 7rem;
+    border: none;
+    cursor: pointer;
+    background-color: beige;
+}
+.registerLink{
+    color: rgba(0, 0, 255,0.6);
+    cursor: pointer;
+}

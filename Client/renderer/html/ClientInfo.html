@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Entry</title>
+</head>
+<body>
+   
+        <div class="input-section">
+            <input type="text" id="name">
+            <label for="name">Full Name</label>
+        </div>
+        <div class="input-section">
+            <input type="text" id="phone">
+            <label for="phone">Pnone Number</label>
+        </div>
+        <div class="input-section">
+            <input type="date" id="dof">
+            <label for="dof">Date of Birth</label>
+        </div>
+        <div class="input-section">
+            <input type="number" id="month">
+            <label for="Month">Month's peyment</label>
+        </div>
+        <div class="input-section">
+            <input type="file" id="fingerPrint">
+        </div>
+        <div class="submit-btn" id="submit">
+            <button type="submit">Submit</button>
+        </div>
+   
+    <script src="../js/utility.js"></script>
+    <script>
+    
+        document.getElementById('submit').onclick=async()=>{
+            data=new FormData()
+            data.append("name",$("name").value)
+            data.append("phone",$("phone").value)
+            data.append("dof",$("dof").value)
+            data.append("payment_date",$("month").value)
+            data.append("finger_print",$("fingerPrint").files[0]);
+
+            let res=await postFormData("http://127.0.0.1:5000/user_info",data);
+        
+            if(res.status==200){
+                alert("Upload sucess")
+            }else{
+                alert("Upload failed")
+            }
+
+        }
+    </script>
+</body>
+</html>
